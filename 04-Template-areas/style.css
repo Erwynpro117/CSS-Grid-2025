@@ -1,0 +1,61 @@
+/*
+
+Grid template areas 
+
+Nos permite definir areas a partir del nombre de las mismas y se utiliza la propiedad grid-template-areas.
+
+Para definfir el nombre de las areas se escribe en las filas entre comillas y las columnas separadas por un epacio.}
+
+
+
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+     "header header header"
+     "main main sidebar"
+     "footer footer footer"
+    ;
+    gap: 24px;
+
+    height: 100vh;
+    background-color: brown;
+}
+
+.item {
+    color: cadetblue;
+    background-color: chocolate;
+}
+
+.header {
+    grid-area: header;
+    background-color: crimson;
+}
+
+.main {
+    grid-area: main;
+    background-color: darkblue;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: darkcyan;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: darkmagenta;
+}
